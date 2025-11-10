@@ -53,12 +53,7 @@
     (vim.treesitter.stop buf)
     (tset vim.bo buf :syntax "on"))
 
-  (vim.api.nvim_buf_set_lines
-    buf 0 -1 false
-    [(str.join [(client.get :comment-prefix)
-                "Sponsored by @"
-                (core.get sponsors (core.inc (math.floor (core.rand (core.dec (core.count sponsors))))))
-                " ❤"])]))
+vim.g["conjure#log#hud#enabled"] = false
 
 (fn upsert-buf []
   (buffer.upsert-hidden
