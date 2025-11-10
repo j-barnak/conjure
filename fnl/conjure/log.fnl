@@ -8,7 +8,6 @@
 (local text (autoload :conjure.text))
 (local editor (autoload :conjure.editor))
 (local timer (autoload :conjure.timer))
-(local sponsors (require :conjure.sponsors))
 (local vim _G.vim)
 
 (local M (define :conjure.log))
